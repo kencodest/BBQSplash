@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBQ Splash Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="top">
+                <p class="top-content">Mouthwateringly delicious</p>
+            </div>
+            <div class="center">
+                <h1 class="center-content">Learn how to make <br> <strong>the best BBQ ribs</strong> <br> in town</h1>
+            </div>
+            <div class="bottom">
+                <h2 class="bottom-content">Join us for this live webinar</h2>
+            </div>
+        </div>
+
+        <div class="right">
+            <div></div>
+
+            <div id="mainContent" class="content">
+                <h2 class="content-header">Become a BBQ master!</h2>
+                <p class="content-sub-header">Register Today</p>
+                <p class="content-main">BBQ isn't just standing in front of your grill with it on full blast and hoping for the best. It's an art! One way to speed up the process is to learn from the best. You can do just that by signing up for this free webinar!</p>
+                <form id="emailCollector" action="#" method="POST">
+                    <input id="firstname" name="firstName" aria-label="first name" type="text" placeholder="First Name" required>
+                    <!-- <label class="label" for="firstname">First Name</label> -->
+                    <input id="email" name="emailAddress" aria-label="email" type="text" placeholder="Email" required>
+                    <!-- <label class="label" for="email">Email</label> -->
+                    <p id="email-error"></p>
+                    <button id="submit" type="submit" class="content-button">Register</button>
+                </form>
+
+                <div class="footer">
+                    <p class="fine-print">We'll never share your information<br>
+                        without your permission</p>
+                </div>
+            </div>
+
+            <div class="footer-secondary">
+                <p>&copy; 2022 All Righs Reserved | Created by <strong><a target="_blank" href="https://github.com/kencodest">kencodest</a></strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
