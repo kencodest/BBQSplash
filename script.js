@@ -48,3 +48,8 @@ function validateEmail(email){
         return false
     }
 }
+
+/*Footer*/
+const date = new Date()
+const year = date.getFullYear()
+document.querySelector('.footer-secondary').innerHTML = `<p><span>&copy;</span> ${year} All Rights Reserved | <a target="_blank" href="https://github.com/kencodest/BBQSplash">kencodest</a></p>`

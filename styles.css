@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;900&display=swap');
-
 * {
     box-sizing: border-box;
     /* border: 1px solid red; */
@@ -9,7 +7,7 @@
 body {
     margin: 0;
     font-size: 1.125rem;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Nunito', sans-serif;
     /* font-family: "Convergence", sans-serif; */
     overflow: hidden;
 }
@@ -28,7 +26,7 @@ h2 {
 
 #email-error {
     font-size: .8rem;
-    color: red;
+    color: #ff713b;
     margin-top: 0;
     padding: 0;
     font-style: italic;
@@ -62,7 +60,7 @@ h2 {
 
 
 .top-content {
-    font-size: 0.625rem;
+    font-size: 0.7em;
     font-weight: 900;
     color: #f18119;
     text-transform: uppercase;
@@ -89,6 +87,7 @@ h2 {
 }
 
 .bottom-content {
+    font-size: 1.3em;
     text-transform: uppercase;
     color: #f18119;
     max-width: 70%;
@@ -114,7 +113,7 @@ h2 {
 
 .content-header {
     color: #404040;
-    margin-bottom: 0.2em;
+    margin-bottom: 1.5em;
 }
 
 .content-sub-header {
@@ -125,45 +124,67 @@ h2 {
 }
 
 .content-main {
-    line-height: 1.2;
+    font-size: 0.9em;
+    line-height: 1.3;
     letter-spacing: .5px;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 
 form {
     display: block;
-    text-align: center;
-    max-width: 100%;
+    /* text-align: center; */
     padding: 1.3em;
-    margin: 0 auto;
     margin-bottom: 1em;
-    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     /* border: 2px solid red; */
 }
 
-.content input {
+.input {
+    position: relative;
+    /* display: flex; */
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
+    /* text-align: center; */
+}
+
+.input .user-icon {
+    position: absolute;
+    left: 1em;
+    bottom: 1.3em;
+    color: #ff713b;
+}
+
+
+.input .email-icon {
+    position: absolute;
+    left: 1em;
+    bottom: 0.4em;
+    color: #ff713b;
+}
+
+
+.input input {
     /* position: absolute; */
     outline: none;
     background: none;
-    display: grid;
     font-family: inherit;
-    font-size: inherit;
-    text-align: center;
-    width: 90%;
+    font-size: 1rem;
     margin: 0 auto;
-    padding: .5em .9em;
-    border: 1px solid #7c7976;
-    border-radius: 0.5rem;
-    transition: transform 250ms;
+    padding: .5em 2.5em;
+    border: 1px solid #f18119;
+    border-radius: 1rem;
 } 
 
-.content input:focus {
-    transform: scale(1.09);
+.input input:focus {
+    border: 1px solid #f18119;
 }
 
 .content input.active {
-    border: 1px solid red;
+    border: 1px solid #f18119
 }
 
 /* .content .label {
@@ -191,17 +212,17 @@ form {
     background-image: linear-gradient( to right, #ffa51d, #ff713b);
     padding: 1em 1.5em;
     font-family: inherit;
-    width: 90%;
     border: 0;
     color: #fff;
     text-transform: uppercase;
     font-weight: 900;
-    border-radius: 5px;
+    border-radius: 1em;
     transition: transform 250ms;
 }
 
 .content-button:hover,
 .content-button:focus {
+    outline: none;
     cursor: pointer;
     transform: scale(1.09);
     border: 1px solid #ffa51d;
@@ -211,6 +232,7 @@ form {
     flex: 0;
     font-size: .79rem;
     letter-spacing: 1px;
+    color: #747272;
 }
 
 .fine-print strong {
@@ -223,19 +245,22 @@ form {
     font-size: 1rem;
 }
 
-.footer-secondary  a{
+.footer-secondary  a {
     color: #ff713b;
+    font-weight: bold;
 }
 
 .footer-secondary  a:focus,
 .footer-secondary  a:hover {
-    text-decoration: none;
+    cursor: pointer;   
+    font-size: 1.05rem;
+    transition: 0.3s ease-in-out;
 }
 
 
 
 /*Media queries*/
-@media(max-width: 720px){
+@media(max-width: 960px){
     body {
         overflow: scroll;
         font-size: 1rem;
@@ -263,7 +288,8 @@ form {
     }
 
     .top-content {
-        max-width: 30%;
+        font-size: 0.7rem;
+        max-width: 40%;
         margin-bottom: 10em;
     }
 
@@ -272,6 +298,11 @@ form {
     }
 
     .bottom-content {
+        font-size: 1.1rem;
         margin-bottom: 1em;
+    }
+
+    .footer-secondary {
+        font-size: 0.9rem;
     }
 }

@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BBQ Splash Page</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Convergence&family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -28,13 +29,17 @@
 
             <div id="mainContent" class="content">
                 <h2 class="content-header">Become a BBQ master!</h2>
-                <p class="content-sub-header">Register Today</p>
+                <p class="content-sub-header">Register Today!</p>
                 <p class="content-main">BBQ isn't just standing in front of your grill with it on full blast and hoping for the best. It's an art! One way to speed up the process is to learn from the best. You can do just that by signing up for this free webinar!</p>
                 <form id="emailCollector" action="#" method="POST">
-                    <input id="firstname" name="firstName" aria-label="first name" type="text" placeholder="First Name" required>
-                    <!-- <label class="label" for="firstname">First Name</label> -->
-                    <input id="email" name="emailAddress" aria-label="email" type="text" placeholder="Email" required>
-                    <!-- <label class="label" for="email">Email</label> -->
+                    <div class="input">
+                        <span class="user-icon"><i class="fas fa-user"></i></span>
+                        <input id="firstname" name="firstName" aria-label="first name" type="text" placeholder="First Name" maxlength="35" minlength="1" required>
+                    </div>
+                    <div class="input">
+                        <span class="email-icon"><i class="fa-solid fa-envelope"></i></span>
+                        <input id="email" name="emailAddress" aria-label="email" type="text" placeholder="Email" maxlength="320" minlength="1" required>
+                    </div>
                     <p id="email-error"></p>
                     <button id="submit" type="submit" class="content-button">Register</button>
                 </form>
@@ -45,9 +50,7 @@
                 </div>
             </div>
 
-            <div class="footer-secondary">
-                <p>&copy; 2022 All Righs Reserved | Created by <strong><a target="_blank" href="https://github.com/kencodest/BBQSplash">kencodest</a></strong></p>
-            </div>
+            <div class="footer-secondary"></div>
         </div>
     </div>
 
